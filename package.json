@@ -1,6 +1,9 @@
 {
   "name": "kicket-html",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.5.0"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
