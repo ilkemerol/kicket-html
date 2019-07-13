@@ -18,7 +18,7 @@ exports.createStaticHtml = async function(req) {
 
 exports.callStaticHtml = async function(req) {
   const uuid = req.params.hash;
-  if (!fs.existsSync("./codes/" + uuid + "/" + uuid + ".js")) {
+  if (!fs.existsSync("./codes/" + uuid + "/" + uuid + ".html")) {
     const json = {
       kicketCode: "N998",
       kicketType: "error",
