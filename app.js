@@ -7,6 +7,10 @@ const createHTMLApiRoute = require("./routes/create.html.api.route");
 const callHTMLApiRoute = require("./routes/call.html.api.route");
 const exampleApiRoute = require("./routes/example.html.api.route");
 
+const gitService = require("./services/git.service");
+
+gitService.getAllFiles();
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(bodyParser.text());

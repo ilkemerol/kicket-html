@@ -5,17 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "author": "ilkem erol",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "express-list-endpoints": "^4.0.1",
     "nodemon": "^1.19.1",
     "path": "^0.12.7",
     "randomstring": "^1.1.5",
+    "rmdir-recursive": "0.0.1",
+    "simple-git": "^1.120.0",
     "simple-node-logger": "^18.12.22"
   }
 }
