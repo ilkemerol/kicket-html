@@ -2,6 +2,8 @@ const randomstring = require("randomstring");
 const fs = require("fs");
 const logger = require("../utils/kicket.logger");
 
+const gitService = require("../services/git.service");
+
 exports.createStaticHtml = async function(req) {
   userFile = req.body;
   const uuid = randomstring.generate({ length: 32, charset: "alphabetic" });
@@ -10,11 +12,20 @@ exports.createStaticHtml = async function(req) {
   });
   fs.appendFileSync("./codes/" + uuid + "/" + uuid + ".html", userFile);
   logger.doit("Create folder and file with UUID: " + uuid);
+  gitService.pushFile(uuid);
   return uuid;
 };
 
 exports.callStaticHtml = async function(req) {
   const uuid = req.params.hash;
+  if (!fs.existsSync("./codes/" + uuid + "/" + uuid + ".js")) {
+    const json = {
+      kicketCode: "N998",
+      kicketType: "error",
+      kicketMessage: "No Such File"
+    };
+    return json;
+  }
   logger.doit("Running UUID: " + uuid);
   return fs.readFileSync("./codes/" + uuid + "/" + uuid + ".html", {
     encoding: "utf-8"
