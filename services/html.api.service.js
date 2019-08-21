@@ -35,7 +35,7 @@ exports.callStaticHtml = async function(req) {
 exports.exampleRestApi = async function() {
   const json = {
     exampleCode:
-      '<html lang="en"><head> <meta http-equiv="content-type" content="text/html; charset=utf-8"><title>Title Goes Here</title></head><body><p>This is my web page</p></body></html>',
+      '<!-- We know HTML is not a programming language, dont worry. This is just HTML preview. --><html lang="en"><head> <meta http-equiv="content-type" content="text/html; charset=utf-8"><title>Title Goes Here</title></head><body><p>This is my web page</p></body></html>',
     exampleRequest: '{"customVariable": "myVariablea"}'
   };
   return json;
