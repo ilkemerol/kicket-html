@@ -21,7 +21,7 @@
     "path": "^0.12.7",
     "randomstring": "^1.1.5",
     "rmdir-recursive": "0.0.1",
-    "simple-git": "^1.120.0",
+    "simple-git": "^3.5.0",
     "simple-node-logger": "^18.12.22"
   }
 }
